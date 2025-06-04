@@ -158,7 +158,7 @@ class BaseConverter:
             *[(f'{prefix}f_rest_{i}', 'f4') for i in range(45)],
             (f'{prefix}opacity', 'f4'),
             (f'{prefix}scale_0', 'f4'), (f'{prefix}scale_1', 'f4'), (f'{prefix}scale_2', 'f4'),
-            (f'{prefix}rot_0', 'f4'), (f'{prefix}rot_1', 'f4'), (f'{prefix}rot_2', 'f4'), (f'{prefix}rot_3', 'f4')
+            (f'{prefix}rot_0', 'f4'), (f'{prefix}rot_1', 'f4'), (f'{prefix}rot_2', 'f4'), (f'{prefix}rot_3', 'f4'), ('label', 'f4')
         ]
         debug_print("[DEBUG] Main dtype constructed.")
         
@@ -257,6 +257,7 @@ class BaseConverter:
                 'cov_q0': 'rot_1',
                 'cov_q1': 'rot_2',
                 'cov_q2': 'rot_3',
+                'label': 'label',
             }
 
             for col in ['nx', 'ny', 'nz']:
